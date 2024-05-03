@@ -8,6 +8,7 @@ import VisualObjectInstance = powerbi.VisualObjectInstance;
 import VisualObjectInstanceEnumerationObject = powerbi.VisualObjectInstanceEnumerationObject;
 export declare class Visual implements IVisual {
     private target;
+    private host;
     private settings;
     private container;
     private slicerItems;
@@ -15,10 +16,11 @@ export declare class Visual implements IVisual {
     private selectSpan;
     private caret;
     private menu;
+    private basicFilter;
     private data;
     constructor(options: VisualConstructorOptions);
-    private addItem;
     update(options: VisualUpdateOptions): void;
+    private addItem;
     private static parseSettings;
     /**
      * This function gets called for each of the objects defined in the capabilities files and allows you to select which of the
